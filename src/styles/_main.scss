@@ -1,0 +1,325 @@
+
+.main__new-tours{
+    border-bottom: .1rem solid #CDCDCD;
+    margin-top: 2.5rem;
+    padding-bottom: 5.8rem;
+
+}
+.new-tours{
+    display:grid;
+    grid-template-areas: 
+    "big small_1"
+    "big small_2";
+    grid-template-columns: 1fr auto;
+    gap:.5rem;
+
+    &__item{
+        overflow: hidden;
+    }
+    &__item:first-child{
+        grid-area: big;
+    }
+    &__item:nth-child(2){
+        grid-area: small_1;
+    }
+    &__item:nth-child(3){
+        grid-area: small_2;
+    }
+
+}
+
+.new-tours-big-img{
+    position: relative;
+    &__content {
+        position: absolute;
+        left: 5.4rem;
+        bottom: 8.6rem;     
+    }
+    &__title{
+        margin: 0;
+        margin-bottom: 1.8rem;
+        color: #fff;
+        width: 50rem;
+        font-size: 5rem;
+        line-height: 5.8rem;
+        font-weight: 400;
+        cursor: default;
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+    
+}
+.new-tours-small-img{
+    position: relative;
+    &__title{
+        cursor: pointer;
+        position: absolute;
+        top:0;
+        left: 0;
+        color: #fff;
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+        font-style: normal;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        white-space: nowrap;
+        margin-left: .5rem;
+        margin-right: .5rem;
+
+    }
+
+}
+.btn-transparent {
+    border: .2rem solid #fff;
+    cursor: pointer;
+    min-width: 16.2rem;
+    height: 3.9rem;
+    border-radius: 10rem;
+    background: transparent;
+    position: relative;
+    &__text{
+        color: #fff;
+        font-size: 1.6rem;
+        position: absolute;
+        top: calc(50% - .8rem);
+        left: 2.2rem;    
+    }
+}
+@media(max-width:993px){
+    .new-tours{
+        grid-template-areas: 
+        "big"
+        "small_1"
+        "small_2";
+    }
+    .new-tours-big-img{  
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+        &__title{
+            text-align: center;
+            margin: 0;
+            margin-bottom: 0;
+            font-size: 2.5rem;
+        }
+        &__img{
+            object-fit: cover;
+            height:15rem;
+            width:100%;
+        }
+    }
+    .new-tours-small-img{  
+        &__img{
+            overflow: hidden;
+            object-fit: cover;
+            height:15rem;
+            width:100%;
+        }
+    }
+}
+@media(max-width:479px){
+    .new-tours-big-img{  
+        &__title{
+            font-size: 2rem;
+        }
+    }
+    .new-tours-small-img{  
+        &__title{
+            font-size: 2rem;
+        }
+    }
+}
+.main__sentence{
+    margin-top: 12.3rem;
+}
+.sentence{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    
+    &__item{
+        background: #F5F5F5;
+        height: 29.6rem;
+        flex: 0 1 21%;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        overflow: hidden;
+        
+        align-items: center;
+    }
+    &__icon{
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-top: 4.791rem;
+        margin-bottom: 4.2rem;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 1.7rem;
+        line-height: 1.9rem;
+        color: #000;
+        margin-bottom: .8rem;
+        position: relative;
+        display: block;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: #D2CFCF;
+            width: 1rem;
+            height: 1rem;
+            right: calc(50% - .5rem);
+            top: -3rem;
+            border-radius: 50%;
+        }
+    }
+    &__description{
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        text-align: center;
+        color: #575757;
+        width: 20.2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+@media(max-width:1080px){
+    .sentence{
+        justify-content: center;
+        &__item{
+            flex: 0 1 48%;
+        }
+        
+    }
+
+}
+@media(max-width:993px){
+
+}
+@media(max-width:767px){
+    
+}
+@media(max-width:479px){
+    
+}
+
+
+.main__popular-tours{
+    max-width: 128.8rem;
+    margin: 0 auto;
+    margin-top: 10rem;
+    padding: 0 15px 0 15px;
+}
+.popular-tours{
+    cursor:default;
+    &__title{
+        cursor:default;
+        color: #000;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 4.7rem;
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+       
+    }
+    &__item{
+        // flex: 1 0 47%;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        color: #fff;
+        margin-bottom: 6.4rem;
+        // height: 42.4rem;
+    }
+    &__img{
+        object-fit: cover;
+        width: 100%;
+    }
+    &__item:not(:nth-child(2n)){
+        margin-right: 5.8rem;
+    }
+    &__content{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-49%, 66%);
+    }
+    &__title-item{
+      font-size: 2.8rem;
+      white-space: nowrap;
+      
+    }
+    &__description{
+       text-align: center;
+       font-size: 1.6rem;
+       width: 51rem;
+    }
+    &__btn{
+        color: #fff;
+        border-width: .1rem;
+        height: 3.5rem;
+    }
+
+}
+@media(max-width:1337px){
+    .popular-tours{
+        &__title{
+            margin-top: 10rem;
+        }
+        margin: 0 auto;
+        &__menu{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        } 
+        &__item:not(:nth-child(2n)){
+            margin-right: 0;
+        }
+    }
+}
+@media(max-width:993px){
+
+}
+@media(max-width:767px){
+    .popular-tours{
+        &__description{
+            width: 31rem;
+        }
+    }
+}
+@media(max-width:479px){
+    .popular-tours{
+
+        &__title-item{
+            font-size: 2.2rem;  
+        }
+
+        &__description{
+            font-size: 1.2rem;
+            width: 21rem;
+        } 
+    }
+}
